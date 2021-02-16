@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .title {
+            text-align: center;
+        }
+        .flexbox {
+            display: flex;
+        }
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin: 10px;
+            box-sizing: border-box;
+            border: 1px solid #60a3bc;
+            background-color: #82ccdd;
+        }
+        .boxPrincipal {
+            width: 450px;
+            height: 450px;
+        }
+        .boxPrincipal--direction {
+            flex-direction: column;
+        }
+        .boxPrincipal--colorWhite {
+            background-color: white;
+        }
+        .boxPrincipal--borderHidden {
+            border: 0;
+        }
+        .boxSecondary {
+            width: 400px;
+            height: 200px;
+            background-color: #82ccdd;
+        }
+        .boxChild {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: #0c2461;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Flexbox</h1>
+    <div class="flexbox">
+        <div class="box boxPrincipal">
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+        </div>
+        <div class="box boxPrincipal boxPrincipal--direction">
+            <div class="boxChild"></div>
+            <div class="boxChild"></div>
+        </div>
+        <div class="box boxPrincipal boxPrincipal--colorWhite boxPrincipal--borderHidden">
+            <div class="box boxSecondary">
+                <div class="boxChild"></div>
+                <div class="boxChild"></div>
+                <div class="boxChild"></div>
+            </div>
+            <div class="box boxSecondary">
+                <div class="boxChild"></div>
+                <div class="boxChild"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
